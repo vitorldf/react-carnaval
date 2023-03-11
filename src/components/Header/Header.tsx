@@ -4,38 +4,99 @@ import {
   Text,
   Image,
   Flex,
-  FormControl,
-  FormLabel,
-  FormErrorMessage,
-  FormHelperText,
   Input,
+  InputLeftElement,
+  InputGroup,
 } from "@chakra-ui/react";
 import top from "../../assets/top.svg";
 import bottom from "../../assets/bottom.svg";
+import { BiSearchAlt } from "react-icons/bi";
+import { HiLocationMarker } from "react-icons/hi";
 
-// bg="#F8F8FF" 
+const color = {
+  color: " #6246EA",
+};
 
 export default function Header() {
   return (
-    <Flex w="100%" bg="red.200" minHeight="53.2rem" fontSize="1.6em" position="relative" overflow="hidden">
-      <Image position="absolute" zIndex={0} top={0} left={0}   width="40.7rem" height="34.5rem" src={top} />
-      <Box  bg="red.400"   w="100%">
-        <Flex  bg="green.200" textAlign="center" direction="column" gap={4}>
-          <Text>find your block</Text>
-          <Text fontSize="4.8rem" as="b">
-            Encontre os <span>melhores <br/> blocos</span> de carnaval de 2023
-          </Text>
-        </Flex>
-        {/* <Flex bg="green.600" w="100%" >
-          <FormControl>
-            <FormLabel>Search Here</FormLabel>
-            <Input type="email" />
-            <FormErrorMessage>Error</FormErrorMessage>
-            <FormHelperText>here pliss</FormHelperText>
-          </FormControl>
-        </Flex> */}
-      </Box>
-      <Image   position="absolute" width="41.4rem" height="33.0rem" right={0} bottom={0} src={bottom} />
+    <Flex
+      display="grid"
+      alignContent="center"
+      justifyContent="center"
+      bg="#F8F8FF"
+      minHeight="53.2rem"
+      position="relative"
+      overflow="hidden"
+      place-content="center"
+    >
+      <Image
+        position="absolute"
+        zIndex={0}
+        top={0}
+        left={0}
+        width="40.7rem"
+        height="34.5rem"
+        src={top}
+      />
+
+      <Flex margin="auto" w="fit-content" textAlign="center" direction="column">
+        <Text
+          fontWeight={500}
+          fontSize="16px"
+          line-height="160%"
+          color="#E45858"
+          textTransform="uppercase"
+          fontFamily="Roboto"
+        >
+          find your block
+        </Text>
+        <Text fontFamily="Roboto" fontSize="4.0rem" as="b">
+          Encontre os{" "}
+          <span style={color}>
+            {" "}
+            melhores blocos <br />
+          </span>
+          de carnaval de 2023
+        </Text>
+      </Flex>
+      <Flex
+        mt="2rem"
+        padding="2rem"
+        gap="2.4rem"
+        w="993px"
+        h="128px"
+        bg="#FFFFFF"
+        border="0.1rem solid #EAEAEA"
+        borderRadius="1.5rem"
+      >
+        <InputGroup>
+          <InputLeftElement children={<BiSearchAlt color="#E45858" />} />
+          <Input
+            size="lg"
+            focusBorderColor="pink.200"
+            placeholder="Pesquise por nome"
+            type="text"
+          />
+        </InputGroup>
+        <InputGroup>
+          <InputLeftElement children={<HiLocationMarker color="#E45858 " />} />
+          <Input
+            size="lg"
+            focusBorderColor="pink.200"
+            placeholder="Pesquise por endereço"
+            type="text"
+          />
+        </InputGroup>
+      </Flex>
+
+      <Image
+        position="absolute"
+        width="41.4rem"
+        height="33.0rem"
+        right={0}
+        bottom={0}
+        src={bottom}
+      />
     </Flex>
   );
 }
