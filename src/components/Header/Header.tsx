@@ -7,11 +7,20 @@ import {
   Input,
   InputLeftElement,
   InputGroup,
+  Select,
+  Button,
+  Icon,
 } from "@chakra-ui/react";
 import top from "../../assets/top.svg";
 import bottom from "../../assets/bottom.svg";
 import { BiSearchAlt } from "react-icons/bi";
 import { HiLocationMarker } from "react-icons/hi";
+
+function getFilterElements() {
+  const filterElements = document.querySelector("header-input");
+
+  const card = document.querySelectorAll(".card");
+}
 
 const color = {
   color: " #6246EA",
@@ -28,6 +37,7 @@ export default function Header() {
       position="relative"
       overflow="hidden"
       place-content="center"
+      fontFamily="Roboto"
     >
       <Image
         position="absolute"
@@ -46,47 +56,75 @@ export default function Header() {
           line-height="160%"
           color="#E45858"
           textTransform="uppercase"
-          fontFamily="Roboto"
         >
           find your block
         </Text>
-        <Text fontFamily="Roboto" fontSize="4.0rem" as="b">
+        <Text fontSize="4.0rem" as="b">
           Encontre os{" "}
           <span style={color}>
             {" "}
             melhores blocos <br />
           </span>
-          de carnaval de 2023
+          de carnaval de 2024
         </Text>
       </Flex>
       <Flex
         mt="2rem"
         padding="2rem"
-        gap="2.4rem"
+        gap="1rem"
         w="993px"
         h="128px"
         bg="#FFFFFF"
         border="0.1rem solid #EAEAEA"
         borderRadius="1.5rem"
+        zIndex="9999"
       >
         <InputGroup>
-          <InputLeftElement children={<BiSearchAlt color="#E45858" />} />
+          <InputLeftElement
+            children={<BiSearchAlt color="#E45858" size="30px" />}
+          />
           <Input
+            id="header-input"
             size="lg"
+            borderRadius="1.2rem"
             focusBorderColor="pink.200"
             placeholder="Pesquise por nome"
             type="text"
           />
         </InputGroup>
-        <InputGroup>
-          <InputLeftElement children={<HiLocationMarker color="#E45858 " />} />
-          <Input
+        {/* <InputGroup>
+          <InputLeftElement children={<HiLocationMarker color="#E45858 " />} /> */}
+        <Select
+          borderRadius="1.2rem"
+          size="lg"
+          placeholder="Selecione uma cidade"
+          focusBorderColor="pink.200"
+          icon={<HiLocationMarker />}
+          iconSize="3.0rem"
+          iconColor="#E45858 "
+          variant="filled"
+        >
+          <HiLocationMarker />
+          <option value="sao-paulo"> São Paulo</option>
+          <option value="rio-de-janeiro"> Rio de Janeiro</option>
+          <option value="curitiba"> Curitiba</option>
+        </Select>
+        <Button
+          w="50%"
+          borderRadius="1.2rem"
+          size="lg"
+          color="white"
+          bg="#6246EA"
+        >
+          BUSCAR AGORA
+        </Button>
+        {/* <Input
             size="lg"
             focusBorderColor="pink.200"
             placeholder="Pesquise por endereço"
             type="text"
-          />
-        </InputGroup>
+          /> */}
+        {/* </InputGroup> */}
       </Flex>
 
       <Image
