@@ -26,7 +26,7 @@ const color = {
   color: " #6246EA",
 };
 
-export default function Header() {
+export default function HeaderComponent() {
   return (
     <Flex
       display="grid"
