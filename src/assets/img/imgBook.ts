@@ -6,6 +6,7 @@ import img5 from "../../assets/img/img5.svg";
 import img6 from "../../assets/img/img6.svg";
 import img7 from "../../assets/img/img7.svg";
 import img8 from "../../assets/img/img8.svg";
+import img9 from "../../assets/img/img9.svg";
 
 export const ImgBook = {
   img1,
@@ -16,5 +17,6 @@ export const ImgBook = {
   img6,
   img7,
   img8,
+  img9,
 
 }

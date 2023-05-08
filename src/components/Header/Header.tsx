@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Box,
   Text,
   Image,
   Flex,
+  FlexProps,
   Input,
   InputLeftElement,
   InputGroup,
@@ -16,11 +17,15 @@ import bottom from "../../assets/bottom.svg";
 import { BiSearchAlt } from "react-icons/bi";
 import { HiLocationMarker } from "react-icons/hi";
 
-function getFilterElements() {
-  const filterElements = document.querySelector("header-input");
+// const [filterCard, setFilterCard] = useState("");
+// const [filterCardLocation, setFilterCardLocation] = useState("");
 
-  const card = document.querySelectorAll(".card");
-}
+// const handleLocationFilter = (e: React.ChangeEvent<HTMLInputElement>) => {
+//   setFilterCardLocation(e.target.value);
+// };
+// const handleCardFilter = (e: React.ChangeEvent<HTMLInputElement>) => {
+//   setFilterCard(e.target.value);
+// };
 
 const color = {
   color: " #6246EA",
@@ -36,7 +41,6 @@ export default function HeaderComponent() {
       minHeight="53.2rem"
       position="relative"
       overflow="hidden"
-      place-content="center"
       fontFamily="Roboto"
     >
       <Image
@@ -90,6 +94,8 @@ export default function HeaderComponent() {
             focusBorderColor="pink.200"
             placeholder="Pesquise por nome"
             type="text"
+            value={"filterCard"}
+            //  onChange={(event) => setTitleFilter(event.target.value)}
           />
         </InputGroup>
         {/* <InputGroup>
@@ -103,6 +109,7 @@ export default function HeaderComponent() {
           iconSize="3.0rem"
           iconColor="#E45858 "
           variant="filled"
+          value={"filterCardLocation"}
         >
           <HiLocationMarker />
           <option value="sao-paulo"> São Paulo</option>

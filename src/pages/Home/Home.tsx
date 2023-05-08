@@ -1,8 +1,9 @@
-import { Button, Flex, Text, Box } from "@chakra-ui/react";
+import { Button, Flex, Text, Box, FlexProps } from "@chakra-ui/react";
 import HeaderComponent from "../../components/Header/Header";
 
 import CardDetailsComponent from "../../components/Cards/Card";
 import { ImgBook } from "../../assets/img/imgBook";
+import Footer from "../../components/Footer/Footer";
 
 export default function HomePage() {
   return (
@@ -23,60 +24,99 @@ export default function HomePage() {
               </Button>
             </Box>
           </Flex>
-          <Flex>
-            <CardDetailsComponent
-              img={ImgBook.img1}
-              title={"O Python do vovô não sobe mais"}
-              summary={
-                "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet"
-              }
-              location={"São Paulo - SP"}
-            />
-            <CardDetailsComponent
-              img={ImgBook.img2}
-              title={"Todo mundo null"}
-              summary={
-                "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet"
-              }
-              location={"Florianópolis - SC"}
-            />
-            <CardDetailsComponent
-              img={ImgBook.img3}
-              title={"Hoje dou exception"}
-              summary={
-                "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet"
-              }
-              location={"Curitiba - PR"}
-            />
-          </Flex>
-          <Flex>
-            <CardDetailsComponent
-              img={ImgBook.img4}
-              title={"O Python do vovô não sobe mais"}
-              summary={
-                "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet"
-              }
-              location={"São Paulo - SP"}
-            />
-            <CardDetailsComponent
-              img={ImgBook.img5}
-              title={"Todo mundo null"}
-              summary={
-                "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet"
-              }
-              location={"Florianópolis - SC"}
-            />
-            <CardDetailsComponent
-              img={ImgBook.img6}
-              title={"Hoje dou exception"}
-              summary={
-                "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet"
-              }
-              location={"Curitiba - PR"}
-            />
+          <Flex direction="column">
+            
+            <Flex>
+              <CardDetailsComponent
+                id={1}
+                img={ImgBook.img1}
+                title={"O Python do vovô não sobe mais"}
+                summary={
+                  "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet"
+                }
+                location={"São Paulo - SP"}
+              />
+              <CardDetailsComponent
+                id={2}
+                img={ImgBook.img2}
+                title={"Todo mundo null"}
+                summary={
+                  "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet"
+                }
+                location={"Florianópolis - SC"}
+              />
+              <CardDetailsComponent
+                id={3}
+                img={ImgBook.img3}
+                title={"Hoje dou exception"}
+                summary={
+                  "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet"
+                }
+                location={"Curitiba - PR"}
+              />
+            </Flex>
+            <Flex>
+              <CardDetailsComponent
+                id={4}
+                img={ImgBook.img4}
+                title={"Manda Node"}
+                summary={
+                  "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet"
+                }
+                location={"Salvador - BA"}
+              />
+              <CardDetailsComponent
+                id={5}
+                img={ImgBook.img5}
+                title={"Só no back-end"}
+                summary={
+                  "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet"
+                }
+                location={"São Paulo - SP"}
+              />
+              <CardDetailsComponent
+                id={6}
+                img={ImgBook.img6}
+                title={"Esse anel não é de Ruby"}
+                summary={
+                  "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet"
+                }
+                location={"São Paulo - SP"}
+              />
+            </Flex>
+            <Flex>
+              <CardDetailsComponent
+                id={7}
+                img={ImgBook.img7}
+                title={"Typesperando ?"}
+                summary={
+                  "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet"
+                }
+                location={"Rio de Janeiro - RJ"}
+              />
+              <CardDetailsComponent
+                id={8}
+                img={ImgBook.img8}
+                title={"EnCACHE aqui"}
+                summary={
+                  "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet"
+                }
+                location={"Porto Alegre - RS"}
+              />
+              <CardDetailsComponent
+                id={9}
+                img={ImgBook.img9}
+                title={"Não valho nada mas JAVA li"}
+                summary={
+                  "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet"
+                }
+                location={"São Paulo - SP"}
+              />
+            </Flex>
           </Flex>
         </Box>
       </Flex>
+      <Footer />
     </>
   );
 }

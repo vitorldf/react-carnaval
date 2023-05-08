@@ -1,6 +1,6 @@
 import {
   Button,
-  Card,
+  
   CardBody,
   Flex,
   Image,
@@ -8,6 +8,7 @@ import {
   Heading,
   Icon,
   Box,
+  Card,
 } from "@chakra-ui/react";
 import { HiLocationMarker } from "react-icons/hi";
 
@@ -16,6 +17,7 @@ interface props {
   title: string;
   summary: string;
   location: string;
+  id: any;
 }
 
 export default function CardDetailsComponent({
@@ -23,9 +25,15 @@ export default function CardDetailsComponent({
   title,
   summary,
   location,
+  id,
 }: props) {
   return (
-    <Card w="384px" h="323px">
+    <Card w="384px" h="323px" id={""} 
+    _hover={{
+      transform: "scale(1.1)",
+      boxShadow: "0 0 20px 0 rgba(38, 35, 83)",
+    }}
+    >
       <CardBody>
         <Image src={img} />
         <Heading fontSize="20px" pt="4">
