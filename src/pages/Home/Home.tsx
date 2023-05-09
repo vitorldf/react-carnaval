@@ -15,17 +15,17 @@ export default function HomePage() {
             <Text fontSize="3.2rem" as="b">
               Blocos recomendados
             </Text>
-            <Box pt={3}>
+            {/* <Box pt={3}>
               <Button size="lg" color="white" bg="#6246EA">
                 LISTA
               </Button>
               <Button size="lg" color="#6246EA" _hover={{ bg: "#4021EA" }}>
                 MAPA
               </Button>
-            </Box>
+            </Box> */}
           </Flex>
           <Flex direction="column" gap={8}>
-            <Flex gap={8}>
+            <Flex  gap={8}>
               <CardDetailsComponent
                 id={1}
                 img={ImgBook.img1}
@@ -42,7 +42,7 @@ export default function HomePage() {
                 summary={
                   "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet"
                 }
-                location={"Florianópolis - SC"}
+                location={"Rio de Janeiro - RJ"}
               />
               <CardDetailsComponent
                 id={3}
@@ -62,7 +62,7 @@ export default function HomePage() {
                 summary={
                   "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet"
                 }
-                location={"Salvador - BA"}
+                location={"Curitiba - PA"}
               />
               <CardDetailsComponent
                 id={5}
@@ -100,7 +100,7 @@ export default function HomePage() {
                 summary={
                   "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet"
                 }
-                location={"Porto Alegre - RS"}
+                location={"Rio de Janeiro - RJ"}
               />
               <CardDetailsComponent
                 id={9}

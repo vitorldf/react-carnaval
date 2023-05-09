@@ -42,21 +42,34 @@ export default function HeaderComponent() {
         <GridItem
           maxH={"1000px"}
           textAlign="center"
-          colSpan={{ base: 12, md: 8, lg: 10 }}
+          colSpan={{ base: 10, md: 12, lg: 10 }}
         >
-          <HStack  justifyContent={"flex-start"} gap={"14.0rem"} direction="column">
-          <Image src={top} w="550px" />
-            <Flex direction="column" id="tittle">
+          <HStack gap={{ base: 0, md: 0, lg: "14.0rem" }}>
+            <Image
+              src={top}
+              w={{ md: "150px", lg: "550px" }}
+              mb="20"
+              display={{ base: "none", md: "block", lg: "block" }}
+            />
+            <Flex
+              direction="column"
+              pl={{ base: 10, md: 8, lg: 0 }}
+              id="tittle"
+            >
               <Text
+                pt={4}
                 fontWeight={500}
-                fontSize="1.5rem"
+                fontSize={{ base: "0.8rem", md: "1.0rem", lg: "1.5rem" }}
                 line-height="160%"
                 color="#E45858"
                 textTransform="uppercase"
               >
                 find your block
               </Text>
-              <Text fontSize="5.0rem" as="b">
+              <Text
+                fontSize={{ base: "1.4rem", md: "2rem", lg: "5.0rem" }}
+                as="b"
+              >
                 Encontre os{" "}
                 <span style={color}>
                   {" "}
@@ -69,10 +82,11 @@ export default function HeaderComponent() {
           </HStack>
           <HStack w="100%" justifyContent="center" mb={"4.0rem"}>
             <Flex
+              direction={{ base: "column", md: "row", lg: "row" }}
               align="center"
               gap={2}
-              w="993px"
-              h="128px"
+              w={{ base: "310px", md: "693px", lg: "993px" }}
+              maxH="128px"
               bg="#FFFFFF"
               border="0.1rem solid #EAEAEA"
               borderRadius="1.5rem"
@@ -84,7 +98,7 @@ export default function HeaderComponent() {
                 />
                 <Input
                   id="header-input"
-                  size="lg"
+                  size={"lg"}
                   borderRadius="1.2rem"
                   focusBorderColor="pink.200"
                   placeholder="Pesquise por nome"
@@ -113,8 +127,9 @@ export default function HeaderComponent() {
               <Button
                 w="50%"
                 borderRadius="1.2rem"
-                size="lg"
+                size={{ base: "sm", md: "lg", lg: "lg" }}
                 color="white"
+                _hover={{ bg: " #262353" }}
                 bg="#6246EA"
               >
                 BUSCAR AGORA
