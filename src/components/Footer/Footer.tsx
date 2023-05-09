@@ -24,10 +24,11 @@ export default function Footer() {
         direction={{ md: "row" }}
         justifyContent={{ base: "normal", md: "space-between", lg: "center" }}
         bg="#F8F8FF"
+        mt={8}
       >
         <Grid
           overflow={{ lg: "hidden" }}
-          h="450x"
+          h="300px"
           mt="10"
           w="1300px"
           pl={2}
@@ -80,10 +81,11 @@ export default function Footer() {
             <Flex id="buttons" pb="2" pt={{ base: 1, lg: "5.0rem" }}>
               <IconButton
                 variant="link"
-                color="secondary.700"
+                color="dark.700"
                 aria-label="Facebook"
                 icon={<FaFacebookSquare size="50px" />}
                 _hover={{
+                  color: "dark.900",
                   bg: "blue.400",
                   transform: "scale(1.1)",
                   boxShadow: "0 0 20px 0 rgba(59, 160, 237)",
@@ -95,10 +97,11 @@ export default function Footer() {
               />
               <IconButton
                 variant="link"
-                color="secondary.700"
+                color="dark.700"
                 aria-label="Instagram"
                 icon={<FaInstagramSquare size="50px" />}
                 _hover={{
+                  color: "dark.900",
                   bg: "pink.300",
                   transform: "scale(1.1)",
                   boxShadow: "0 0 20px 0 rgba(168, 50, 139)",
@@ -113,10 +116,11 @@ export default function Footer() {
               />
               <IconButton
                 variant="link"
-                color="secondary.700"
+                color="dark.700"
                 aria-label="GitHub"
                 icon={<FaGithubSquare size="50px" />}
                 _hover={{
+                  color: "dark.900",
                   bg: "yellow.300",
                   transform: "scale(1.1)",
                   boxShadow: "0 0 20px 0 rgba(00, 00, 00)",
@@ -128,10 +132,11 @@ export default function Footer() {
               />
               <IconButton
                 variant="link"
-                color="secondary.700"
+                color="dark.700"
                 aria-label="Linkedin"
                 icon={<FaLinkedin size="50px" />}
                 _hover={{
+                  color: "dark.900",
                   bg: "blue.500",
                   transform: "scale(1.1)",
                   boxShadow: "0 0 20px 0 rgba(02, 11, 458)",

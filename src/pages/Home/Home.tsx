@@ -24,9 +24,8 @@ export default function HomePage() {
               </Button>
             </Box>
           </Flex>
-          <Flex direction="column">
-            
-            <Flex>
+          <Flex direction="column" gap={8}>
+            <Flex gap={8}>
               <CardDetailsComponent
                 id={1}
                 img={ImgBook.img1}
@@ -55,7 +54,7 @@ export default function HomePage() {
                 location={"Curitiba - PR"}
               />
             </Flex>
-            <Flex>
+            <Flex gap={8}>
               <CardDetailsComponent
                 id={4}
                 img={ImgBook.img4}
@@ -84,7 +83,7 @@ export default function HomePage() {
                 location={"São Paulo - SP"}
               />
             </Flex>
-            <Flex>
+            <Flex gap={8}>
               <CardDetailsComponent
                 id={7}
                 img={ImgBook.img7}

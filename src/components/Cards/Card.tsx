@@ -1,6 +1,5 @@
 import {
   Button,
-  
   CardBody,
   Flex,
   Image,
@@ -28,11 +27,15 @@ export default function CardDetailsComponent({
   id,
 }: props) {
   return (
-    <Card w="384px" h="323px" id={""} 
-    _hover={{
-      transform: "scale(1.1)",
-      boxShadow: "0 0 20px 0 rgba(38, 35, 83)",
-    }}
+    <Card
+      
+      w="384px"
+      h="323px"
+      id={""}
+      _hover={{
+        transform:" scale(1.1)",
+        boxShadow: "0 0 10px 0 rgba(38, 35, 83)",
+      }}
     >
       <CardBody>
         <Image src={img} />
