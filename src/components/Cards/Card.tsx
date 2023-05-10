@@ -17,6 +17,7 @@ interface props {
   summary: string;
   location: string;
   id: any;
+ 
 }
 
 export default function CardDetailsComponent({
@@ -28,7 +29,7 @@ export default function CardDetailsComponent({
 }: props) {
   return (
     <Card
-      
+      bg="#F8F8FF"
       w="384px"
       h="323px"
       id={""}

@@ -8,7 +8,7 @@ import img7 from "../../assets/img/img7.svg";
 import img8 from "../../assets/img/img8.svg";
 import img9 from "../../assets/img/img9.svg";
 
-export const ImgBook = {
+export default {
   img1,
   img2,
   img3,
@@ -18,5 +18,4 @@ export const ImgBook = {
   img7,
   img8,
   img9,
-
 }

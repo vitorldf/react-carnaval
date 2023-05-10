@@ -21,21 +21,19 @@ import bottom from "../../assets/bottom.svg";
 import { BiSearchAlt } from "react-icons/bi";
 import { HiLocationMarker } from "react-icons/hi";
 
-// const [filterCard, setFilterCard] = useState("");
-// const [filterCardLocation, setFilterCardLocation] = useState("");
-
-// const handleLocationFilter = (e: React.ChangeEvent<HTMLInputElement>) => {
-//   setFilterCardLocation(e.target.value);
-// };
-// const handleCardFilter = (e: React.ChangeEvent<HTMLInputElement>) => {
-//   setFilterCard(e.target.value);
-// };
+interface headerProps {
+  searchTerm: any;
+  handleSearch(value: string): void;
+}
 
 const color = {
   color: " #6246EA",
 };
 
-export default function HeaderComponent() {
+export default function HeaderComponent({
+  searchTerm,
+  handleSearch,
+}: headerProps) {
   return (
     <Flex bg="#F8F8FF" fontFamily="Roboto">
       <Grid w={"100%"} templateColumns="repeat(10, 1fr)">
@@ -80,6 +78,7 @@ export default function HeaderComponent() {
             </Flex>
             {/* <Image width="41.4rem" height="34.8rem" src={bottom} pt={"20.0rem"} /> */}
           </HStack>
+          <form>
           <HStack w="100%" justifyContent="center" mb={"4.0rem"}>
             <Flex
               direction={{ base: "column", md: "row", lg: "row" }}
@@ -103,8 +102,8 @@ export default function HeaderComponent() {
                   focusBorderColor="pink.200"
                   placeholder="Pesquise por nome"
                   type="text"
-                  value={""}
-                  //  onChange={(event) => setTitleFilter(event.target.value)}
+                  value={searchTerm}
+                  onChange={(event) => handleSearch(event.target.value)}
                 />
               </InputGroup>
 
@@ -136,17 +135,8 @@ export default function HeaderComponent() {
               </Button>
             </Flex>
           </HStack>
+          </form>
         </GridItem>
-        {/* <GridItem
-          bg="red.200"
-          colSpan={{ base: 4, md: 4, lg: 8 }}
-          gap="1rem"
-          w="993px"
-          h="128px"
-          // bg="#FFFFFF"
-          border="0.1rem solid #EAEAEA"
-          borderRadius="1.5rem"
-        ></GridItem> */}
       </Grid>
     </Flex>
   );
